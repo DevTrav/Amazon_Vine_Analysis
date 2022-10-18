@@ -30,3 +30,13 @@ vote_count.show()
 vote_count.count()
 ```
 
+# DataFrame where the number of helpful_votes divided by total_votes is equal to or greater than 50%.
+
+- Next, the verfied data was filtered to find the vine reviews with the highest percentage of most helpful votes.
+```
+new_table = vote_count.filter(vote_count["helpful_votes"]/ vote_count["total_votes"]>= 0.5)
+new_table.show()
+new_table.count()
+```
+- This filter decreases the data by `38%` at `40565` votes. 
+
