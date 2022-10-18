@@ -33,10 +33,24 @@ vote_count.count()
 ### Filtering for reviews where the number of helpful_votes equal to or greater than 50%.
 
 - Next, the verfied data was filtered to find the vine reviews with the highest percentage of most helpful votes.
+
 ```
 new_table = vote_count.filter(vote_count["helpful_votes"]/ vote_count["total_votes"]>= 0.5)
 new_table.show()
 new_table.count()
 ```
-- This filter decreases the data by `38%` at `40565` votes. 
+- This filter decreases the data by `38%` at `40565` votes. However, by using the number of helpful votes ratio to total reviews, the new data set is a better measure of the reach of total reviews.
 
+
+
+## Results
+How many Vine reviews and non-Vine reviews were there?
+- The data shows that there are `94` total Vine program videogame reviews and non-Vine reviews total `40,471`. 
+- The Vine program reviews makeup `.2% ` of reviews with `total votes over 20` and a `helpful votes ratio of 50 % or above. This shows that the impact of Vine program videogame reviews are significantly lower than other Amazon users.
+
+How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
+- The data shows that of the 94 Vine program videogame reviews, `51%` are `five-star` reviews. 
+- Conversely, non-Vine are more conservative,  with 5 stars awarded to only `39%`  of total reviews.
+- This shows a bias toward 5-star videogame reviews in Vine program participants.
+
+What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
